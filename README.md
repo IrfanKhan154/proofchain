@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ProofChain
 
-## Getting Started
+## AI-Powered Evidence Auditing for Accountable Decisions
 
-First, run the development server:
+ProofChain is an AI-powered claim-to-evidence auditing application that analyzes reports, proposals, and AI-generated content by comparing claims directly against supplied evidence.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+It identifies what is:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ Supported
+- ⚠️ Partially Supported
+- ❌ Contradicted
+- ❓ Missing Evidence
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Live Demo:
+https://proofchain-beta.vercel.app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Problem
 
-To learn more about Next.js, take a look at the following resources:
+Organizations, researchers, and decision-makers often rely on reports containing many claims. Manually verifying every statement against source evidence is slow and error-prone.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ProofChain helps automate this process by creating structured, evidence-grounded audits.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔍 Claim Analysis
+Extracts and evaluates individual claims from documents.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🤖 AI Evidence Reasoning
+Uses Gemini AI to compare claims against provided evidence while following strict evidence-only rules.
+
+### 📊 Deterministic Numeric Verification
+Automatically verifies numerical claims such as:
+
+- Percentage changes
+- Direct comparisons
+- Reported statistics
+
+Example:
+
+Claim:
+"Participation increased by 60%"
+
+Evidence:
+100 participants → 140 participants
+
+Result:
+Contradicted (actual increase: 40%)
+
+
+### 📋 Structured Audit Reports
+
+Generates:
+
+- Audit summary
+- Claim-by-claim results
+- Evidence excerpts
+- Reasoning
+- Numeric verification details
+
+
+## How It Works
