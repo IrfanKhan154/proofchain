@@ -10,6 +10,8 @@ Our 2026 training initiative produced exceptional results across underserved com
 
 Student participation increased by 60% compared with the previous year.
 
+The post-program confidence survey received 200 responses.
+
 The program reached 500 rural students.
 
 85% of all program participants reported improved confidence after completing the training.
@@ -548,6 +550,17 @@ export default function Home() {
                               Confidence: {formatConfidence(claim.confidence)}
                             </span>
                           </div>
+
+                          <section className="mt-4">
+                            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-600">
+                              Evidence Match
+                            </h4>
+                            <dl className="mt-2 space-y-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm leading-6 text-slate-700">
+                              <div><dt className="inline font-medium text-slate-900">Supports: </dt><dd className="inline">{claim.evidenceMatch?.supporting || "No supporting evidence identified."}</dd></div>
+                              <div><dt className="inline font-medium text-slate-900">Contradicts: </dt><dd className="inline">{claim.evidenceMatch?.contradicting || "No contradicting evidence identified."}</dd></div>
+                              <div><dt className="inline font-medium text-slate-900">Missing: </dt><dd className="inline">{claim.evidenceMatch?.missing || "No additional information identified."}</dd></div>
+                            </dl>
+                          </section>
 
                           <section className="mt-4">
                             <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-600">
