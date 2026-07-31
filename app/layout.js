@@ -1,6 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL("https://proofchain-beta.vercel.app"),
   title: "ProofChain | AI Evidence Verification Platform",
   description:
     "AI-powered evidence verification platform for claim verification, evidence matching, confidence scoring, and structured audit reports.",
@@ -26,8 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ProofChain | AI Evidence Verification Platform",
-    description:
-      "AI-powered evidence verification platform.",
+    description: "AI-powered evidence verification platform.",
     images: ["/og-image.png"],
   },
 };
@@ -35,9 +35,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
