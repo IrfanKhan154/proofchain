@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "ProofChain | AI Evidence Verification Platform",
     description:
-      "AI-powered evidence verification platform for claim verification and structured audit reports.",
+      "AI-powered evidence verification platform for claim verification, evidence matching, confidence scoring, and structured audit reports.",
     url: "https://proofchain-beta.vercel.app",
     siteName: "ProofChain",
     images: [
